@@ -48,6 +48,8 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!--=============== SweetAlert ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -633,7 +635,7 @@
                 <div class="contact__content">
                     <h3 class="contact__title contact__title-form">Write Me your Message</h3>
 
-                    <form action="" class="contact__form">
+                    <form action="#" class="contact__form">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Name</label>
                             <input type="text" placeholder="Enter name" class="contact__form-input">
@@ -649,13 +651,10 @@
                             <textarea name="" id="" cols="30" rows="10" placeholder="Write your Message"
                                 class="contact__form-input "></textarea>
                         </div>
-
-
-                        <button class="button send-message">
+                        <button class="button send-message" onclick="showAlert()">
                             Send Message
                         </button>
                     </form>
-
                 </div>
 
         </section>
@@ -682,6 +681,15 @@
 </body>
 
 <script>
+    function showAlert() {
+        Swal.fire({
+        title: 'Under Development',
+        text: 'This feature is currently under development.',
+        icon: 'info',
+        confirmButtonText: 'OK'
+        });
+ }
+
     (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="R5g0cliq5obdBVDGK0HnG";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
 </html>
